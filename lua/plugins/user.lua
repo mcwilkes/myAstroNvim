@@ -115,5 +115,7 @@ return {
       lsp_doc_border = false, -- add a border to hover docs and signature help
     },
   },
+
+  -- add code-runner plugin
   require "compiler",
 }

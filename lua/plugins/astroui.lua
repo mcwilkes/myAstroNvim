@@ -36,4 +36,32 @@ return {
       LSPLoading10 = "⠏",
     },
   },
+
+  -- add a few more available colorschemes
+  {
+    "folke/tokyonight.nvim",
+    lazy = false, -- make sure to load the colorscheme before AstroNvim
+    priority = 1000,
+    config = function()
+      require("tokyonight").setup {
+        style = "night", -- choose the style you prefer
+      }
+    end,
+  },
+
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup {
+        options = {
+          styles = { -- theme-specific highlights
+            comments = "NONE", -- change comment style
+            keywords = "bold", -- style keywords
+            functions = "NONE", -- style functions
+            variables = "NONE", -- style variables
+          },
+        },
+      }
+    end,
+  },
 }
