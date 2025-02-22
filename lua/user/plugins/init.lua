@@ -1,4 +1,5 @@
 require "compiler"
 require "noice"
+require "nvim-notify"
 require "dap"
 require "plug_config"
