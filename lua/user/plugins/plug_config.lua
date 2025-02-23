@@ -64,3 +64,30 @@ vim.api.nvim_set_keymap(
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap("n", "mt", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
+
+-- In your init.lua or a relevant configuration file
+vim.api.nvim_create_autocmd("User", {
+  pattern = "AstroFileOpened",
+  callback = function()
+    vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#FF0000" })
+    vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#FFA500" })
+    vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#00FF00" })
+    vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0000FF" })
+    vim.diagnostic.config {
+      virtual_text = true,
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+      float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        -- source = "always",
+        header = "",
+        prefix = "",
+        timeout = 500, -- Adjust this value to control the popup duration
+      },
+    }
+  end,
+})
