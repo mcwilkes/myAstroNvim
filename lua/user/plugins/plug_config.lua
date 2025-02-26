@@ -4,7 +4,7 @@ require("mason-nvim-dap").setup_handlers {
     local dap = require "dap"
     dap.adapters.python = {
       type = "executable",
-      command = vim.fn.exepath "/opt/anaconda3/envs/py3-13-2/bin/python3", -- or the path to your virtual environment's python
+      command = vim.fn.exepath "/usr/local/anaconda3/bin/python3", -- or the path to your virtual environment's python
       args = { "-m", "debugpy.adapter" },
     }
     dap.configurations.python = {
