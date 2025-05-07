@@ -17,3 +17,5 @@ end
 
 require "lazy_setup"
 require "polish"
+
+vim.opt.conceallevel = 1 -- for Obsidian Markdown formatting
