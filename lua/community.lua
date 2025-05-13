@@ -10,5 +10,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.note-taking.obsidian-nvim" }, -- Obsidian Markdown
+  { import = "astrocommunity.icon.mini-icons" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 }
