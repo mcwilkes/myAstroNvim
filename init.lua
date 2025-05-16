@@ -18,7 +18,8 @@ end
 require "lazy_setup"
 require "polish"
 
-vim.opt.conceallevel = 2 -- for Obsidian Markdown formatting
+vim.opt.conceallevel = 2 -- for Markdown formatting
 vim.g.markdown_folding = 1
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.api.nvim_set_hl(0, "Folded", { bg = "lightyellow", fg = "black" })
