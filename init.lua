@@ -22,4 +22,3 @@ vim.opt.conceallevel = 2 -- for Obsidian Markdown formatting
 vim.g.markdown_folding = 1
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldcolumn = 2
